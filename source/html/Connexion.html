@@ -17,24 +17,28 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                <a class="nav-link active" aria-current="page" href="./Accueil.html">Accueil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Liste</a>
+                <a class="nav-link" href="./Liste.html">Liste</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">A propos</a>
+                <a class="nav-link" href="./apropos.html">A propos</a>
               </li>
             </ul>
             <li class="d-flex">
-                <a class="nav-link" href="Connexion.html">Utilisateur</a>
+                <a class="nav-link" href="./Connexion.html">Utilisateur</a>
             </li>
           </div>
         </div>
       </nav>
 
       <h1>Les tigresses</h1>
-      <form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <form class="container">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -44,18 +48,48 @@
           <label for="exampleInputPassword1" class="form-label">Password</label>
           <input type="password" class="form-control" id="exampleInputPassword1">
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="button"><a href="Accueil.html" class="btn btn-primary ">Sign In</a>
-        </button>
+        <div class="margot" >
+        <button type="button"><a href="Accueil.html" class="btn btn-primary ">Connexion</a>
+        </button></div>
       </form>
-
+        <div class ="container">
+            <br>
+            <br>
         <p>New users</p>
-        <button type="button"><a href="Inscription.html" class="btn btn-primary ">Sign Up</a>
-        </button>
-        
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-  </body>
+        <div class="toine" >
+        <button type="button"><a href="Inscription.html" class="btn btn-primary ">Inscription</a>
+        </button></div></div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  
+        <style>
+            h1 {
+                text-align: center;
+            }
+
+            p{
+                text-align: center;
+            }
+
+            .mb-3 {
+                text-align: center;
+            }
+           .container {
+            width: 50%;
+           }
+
+           .margot {
+            display: flex;
+      align-items: right;
+      justify-content: right;
+           }
+
+           .toine {
+            display: flex;
+      align-items: center;
+      justify-content: center;
+           }
+
+        </style>
+
+    </body>
 </html>
