@@ -1,0 +1,22 @@
+.first-form {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 50%;
+}
+
+.second-form {
+    width: 50%;
+    margin-top: 150px;
+    margin-right: 50px;
+}
+
+.second-form-container {
+    display: flex;
+    justify-content: end;
+}
+.table-container{
+    margin-top: 50px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
