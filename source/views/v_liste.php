@@ -112,35 +112,27 @@
 
         </div>
     </div>
-
     <div class="table-container">
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Critères</th>
+                <th scope="col">Caractéristique</th>
+                <th scope="col">Symptome</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
+              <?php
+              foreach ($resultat1 as $ligne) {
+                echo '<tr>
+                <th scope="row">'.$ligne['idp'].'</th>
+                <td>'.$ligne['mer'].'</td>
+                <td>'.$ligne['type'].'</td>
+                <td>'.$ligne['desc'].'</td>
+              </tr>';
+              }              
+              ?>
             </tbody>
           </table>
     </div>

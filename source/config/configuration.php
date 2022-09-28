@@ -14,7 +14,7 @@ const DEBUG = true; // production : false; dev : true
 // Accès base de données
 const BD_HOST = 'localhost';
 const BD_DBNAME = 'acudb';
-const BD_USER = 'tp';
+const BD_USER = 'pgtp';
 const BD_PWD = 'tp';
 
 // Langue du site
@@ -27,7 +27,7 @@ const AUTEUR = 'Lucas Coudrais, Mohamed Benyoub, Yanis Ben Amor';
 define('PATH_CONTROLLERS','./controllers/c_');
 define('PATH_ASSETS','./assets/');
 define('PATH_LIB','./lib/');
-define('PATH_MODELS','./models/m_');
+define('PATH_MODELS','./model/m_');
 define('PATH_VIEWS','./views/v_');
 define('PATH_TEXTES','./languages/');
 
