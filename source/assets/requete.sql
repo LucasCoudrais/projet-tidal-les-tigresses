@@ -1,4 +1,4 @@
-select * from patho
+select patho.desc, meridien.nom, symptome.desc, keywords.name  from patho
 inner join meridien on patho.mer = meridien.code
 inner join symptpatho on patho.idp = symptpatho.idp
 inner join symptome on symptpatho.ids = symptome.ids
