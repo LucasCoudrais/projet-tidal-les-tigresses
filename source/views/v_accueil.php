@@ -31,23 +31,23 @@
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
 
-        <a href="./Accueil.html" class="navbar-brand"> <img class="fas fa-hiking"></i> Les tigresses </a>
+        <a href="http://localhost:50080/source/index.php?page=accueil" class="navbar-brand"> <img class="fas fa-hiking"></i> Les tigresses </a>
         <div id="nav-close" class="fas fa-times"></div>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./Accueil.html">Accueil</a>
+              <a class="nav-link active" aria-current="page"  href="http://localhost:50080/source/index.php?page=accueil">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./Liste.html">Liste</a>
+              <a class="nav-link" href="http://localhost:50080/source/index.php?page=liste">Liste</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./apropos.html">A propos</a>
+              <a class="nav-link" href="http://localhost:50080/source/index.php?page=apropos">A propos</a>
             </li>
           </ul>
           <li class="d-flex">
-            <a class="nav-link" href="./Connexion.html">
+            <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion">
             <img class="icon_user" src="assets/icons/account_user.png" ></a>
           </li>
         </div>
@@ -78,12 +78,12 @@
         <div class="row">
           <div class="col-6">
             <div class="button">
-              <a href="./Connexion.html" class="btn btn-primary ">Se connecter</a>
+              <a href="http://localhost:50080/source/index.php?page=connexion" class="btn btn-primary ">Se Connecter</a>
               </div>
           </div>
           <div class="col-6">
             <div class="button">
-              <a href="./Inscription.html" class="btn btn-primary ">S'inscrire</a>
+              <a href="http://localhost:50080/source/index.php?page=inscription" class="btn btn-primary ">S'inscrire</a>
               </div>
           </div>
         </div>
