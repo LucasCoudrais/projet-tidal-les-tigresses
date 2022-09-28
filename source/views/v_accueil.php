@@ -13,7 +13,7 @@
 ?>
 <!doctype html>
 
-<html lang="en">
+<html lang="fr">
 
 <head>
 
@@ -28,27 +28,26 @@
 
 <body>
   <header class="header">
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg " style="background-color: #57b846;">
       <div class="container-fluid">
 
-        <a href="http://localhost:50080/source/index.php?page=accueil" class="navbar-brand"> <img class="fas fa-hiking"></i> Les tigresses </a>
-        <div id="nav-close" class="fas fa-times"></div>
+        <a href="http://localhost:50080/source/index.php?page=accueil" class="navbar-brand" style="color: white;"> Les tigresses </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page"  href="http://localhost:50080/source/index.php?page=accueil">Accueil</a>
+              <a class="nav-link link-navbar " style="color: black;" aria-current="page"  href="http://localhost:50080/source/index.php?page=accueil">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://localhost:50080/source/index.php?page=liste">Liste</a>
+              <a class="nav-link link-navbar" style="color: white;" href="http://localhost:50080/source/index.php?page=liste">Liste</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://localhost:50080/source/index.php?page=apropos">A propos</a>
+              <a class="nav-link " style="color: white;" href="http://localhost:50080/source/index.php?page=apropos">A propos</a>
             </li>
           </ul>
           <li class="d-flex">
-            <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion">
-            <img class="icon_user" src="assets/icons/account_user.png" ></a>
+            <a class="nav-link"href="http://localhost:50080/source/index.php?page=connexion"><span class='icon_user ' style="
+    background: url('assets/icons/account_user-white.png');"></span></a>
           </li>
         </div>
 
@@ -78,12 +77,12 @@
         <div class="row">
           <div class="col-6">
             <div class="button">
-              <a href="http://localhost:50080/source/index.php?page=connexion" class="btn btn-primary ">Se Connecter</a>
+              <a href="http://localhost:50080/source/index.php?page=connexion" class="btn btn-primary ">Se connecter</a>
               </div>
           </div>
           <div class="col-6">
             <div class="button">
-              <a href="http://localhost:50080/source/index.php?page=inscription" class="btn btn-primary ">S'inscrire</a>
+              <a href="http://localhost:50080/source/index.php?page=inscription"  class="btn btn-primary ">S'inscrire</a>
               </div>
           </div>
         </div>

@@ -12,7 +12,7 @@
 //  En tête de page
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,72 +21,89 @@
     <link rel="stylesheet" href="assets/css/connexion.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   </head>
-  <body>
+  <body>  
     <header class="header">
-      <nav class="navbar navbar-expand-lg bg-light">
+      <nav class="navbar navbar-expand-lg " style="background-color: #57b846;">
         <div class="container-fluid">
-  
-          <a href="http://localhost:50080/source/index.php?page=accueil" class="navbar-brand"> <img class="fas fa-hiking"></i> Les tigresses </a>
-          <div id="nav-close" class="fas fa-times"></div>
-  
+
+          <a href="http://localhost:50080/source/index.php?page=accueil" class="navbar-brand" style="color: white;"> Les tigresses </a>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="http://localhost:50080/source/index.php?page=accueil">Accueil</a>
+                <a class="nav-link link-navbar " style="color: white;" aria-current="page" href="http://localhost:50080/source/index.php?page=accueil">Accueil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://localhost:50080/source/index.php?page=liste">Liste</a>
+                <a class="nav-link link-navbar" style="color: white;" href="http://localhost:50080/source/index.php?page=liste">Liste</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://localhost:50080/source/index.php?page=apropos">A propos</a>
+                <a class="nav-link " style="color: white;" href="http://localhost:50080/source/index.php?page=apropos">A propos</a>
               </li>
             </ul>
             <li class="d-flex">
-              <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion"><span class='icon_user'></span></a>
+              <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion"><span class='icon_user' style="
+    background: url('assets/icons/account_user_black.png');"></span></a>
             </li>
           </div>
-  
+
         </div>
       </nav>
-  
-  
+
+
     </header>
-      <h1>Les tigresses</h1>
-      <br>
-      <div class="text-center">
-        <img src="assets/80869-la-jeune-tigresse-isha.jpg" class=" tigresses" alt="tigresses">
-      </div>
-      <br>
-      <br>
-      <br>
-      <form class="container">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="margot" >
-          <div class="button">
-            <a href="http://localhost:50080/source/index.php?page=accueil" class="btn btn-primary ">Connexion</a>
-        </div></div>
-      </form>
-        <div class ="container">
-            <br>
-            <br>
-        <p>New users</p>
-        <div class="toine" >
-          <div class="button">
-            <a href="http://localhost:50080/source/index.php?page=inscription" class="btn btn-primary ">Inscription</a>
+
+
+    <div class="limiter">
+      <div class="container-login100">
+        <div class="wrap-login100 ">
+          <form class="login100-form validate-form">
+       
+            <span class="login100-form-avatar">
+              <img src="assets/tigre.png" alt="AVATAR">
+            </span>
+            <div class="wrap-input100 validate-input m-t-20 m-b-15" data-validate="Username">
+              <input class="input100" type="text" name="Username">
+              <span class="focus-input100" data-placeholder="Adresse mail"></span>
+            </div>
+            <div class="wrap-input100 validate-input m-b-30" data-validate="Password">
+              <input class="input100" type="password" name="Password">
+              <span class="focus-input100" data-placeholder="Mot de passe"></span>
+            </div>
+            <div class="container-login100-form-btn">
+              <button class="login100-form-btn">
+                Connexion
+              </button>
+            </div>
+            <ul class="login-more p-t-20 mb-2">
+              <li class="m-b-8">
+                <span class="txt1">
+                  Mot de passe
+                </span>
+                <a href="#" class="txt2">
+                  oublié ?
+                </a>
+              </li>
+              <li>
+                <span class="txt1">
+                  Vous n'avez pas de compte ?
+                </span>
+                <a  href="http://localhost:50080/source/index.php?page=inscription" class="txt2">
+                  Inscription
+                </a>
+              </li>
+            </ul>
+          </form>
         </div>
       </div>
     </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-      
-    
-       
-    </body>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"></script>
+
+
+
+</body>
+
 </html>
