@@ -116,20 +116,24 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">Nom</th>
-                <th scope="col">Critères</th>
-                <th scope="col">Caractéristique</th>
+                <th scope="col">Description</th>
+                <th scope="col">Type</th>
+                <th scope="col">Nom méridien</th>
+                <th scope="col">Code méridien</th>
                 <th scope="col">Symptome</th>
+                <th scope="col">Clé symptome</th>
               </tr>
             </thead>
             <tbody>
               <?php
               foreach ($resultat1 as $ligne) {
                 echo '<tr>
-                <th scope="row">'.$ligne['idp'].'</th>
-                <td>'.$ligne['mer'].'</td>
+                <th scope="row">'.$ligne['desc_patho'].'</th>
                 <td>'.$ligne['type'].'</td>
-                <td>'.$ligne['desc'].'</td>
+                <td>'.$ligne['nom_meri'].'</td>
+                <td>'.$ligne['code_meri'].'</td>
+                <td>'.$ligne['desc_symptome'].'</td>
+                <td>'.$ligne['cle_sympt'].'</td>
               </tr>';
               }              
               ?>
