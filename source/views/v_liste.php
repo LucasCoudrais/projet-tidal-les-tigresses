@@ -22,7 +22,21 @@
     <link rel="stylesheet" href="assets/css/liste.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <title>How to create searchable select box</title>
+<!-- JS for jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- CSS for searching -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<!-- JS for searching -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
+
+<script>
+// .js-example-basic-single declare this class into your select box
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
+</script>
 
 <body>
 <header class="header">
@@ -59,30 +73,21 @@
         <div class="col">
 
             <form class="row g-3 needs-validation first-form" novalidate>
-                <div class="col-12">
-                    <label for="validationCustom04" class="form-label">Critères</label>
-                    <select class="form-select" id="validationCustom04" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Please select a valid state.
-                    </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Recherche pathologie</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">Recherche de mot(s) dans la description de la pathologie</div>
                 </div>
-                <div class="col-12">
-                    <label for="validationCustom04" class="form-label">Pathologies</label>
-                    <select class="form-select" id="validationCustom04" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Please select a valid state.
-                    </div>
-                </div>
+
+                <label for="cars">Code méridien</label>
+
+                <select name="cars" id="cars" class="js-example-basic-single">
+                <?php
+              foreach ($resultat3 as $ligne3) {
+                echo '<tr><option value="'.$ligne3['mer'].'">'.$ligne3['mer'].'</option>';
+              }              
+              ?>
+                </select> 
                 <div class="col-12">
                     <button class="btn btn-primary" type="submit">Valider</button>
                 </div>
@@ -92,19 +97,16 @@
 
         <div class="col second-form-container">
 
-            <form class="row g-3 needs-validation second-form" novalidate>
-                <div class="col-12">
-                    <label for="validationCustom04" class="form-label">Recherche par pathologie</label>
-                    <select class="form-select" id="validationCustom04" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Please select a valid state.
-                    </div>
-                </div>
+            <form class="row g-3 needs-validation first-form" novalidate>
+            <label for="keyword">Mot clé de symptome </label>
+
+            <select name="keyword" id="keyword" class="js-example-basic-single">
+              <?php
+              foreach ($resultat2 as $ligne2) {
+                echo '<tr><option value="'.$ligne2['name'].'">'.$ligne2['name'].'</option>';
+              }              
+              ?>
+            </select> 
                 <div class="col-12">
                     <button class="btn btn-primary" type="submit">Rechercher</button>
                 </div>
@@ -116,20 +118,24 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">Nom</th>
-                <th scope="col">Critères</th>
-                <th scope="col">Caractéristique</th>
+                <th scope="col">Description</th>
+                <th scope="col">Type</th>
+                <th scope="col">Nom méridien</th>
+                <th scope="col">Code méridien</th>
                 <th scope="col">Symptome</th>
+                <th scope="col">Clé symptome</th>
               </tr>
             </thead>
             <tbody>
               <?php
               foreach ($resultat1 as $ligne) {
                 echo '<tr>
-                <th scope="row">'.$ligne['idp'].'</th>
-                <td>'.$ligne['mer'].'</td>
+                <th scope="row">'.$ligne['desc_patho'].'</th>
                 <td>'.$ligne['type'].'</td>
-                <td>'.$ligne['desc'].'</td>
+                <td>'.$ligne['nom_meri'].'</td>
+                <td>'.$ligne['code_meri'].'</td>
+                <td>'.$ligne['desc_symptome'].'</td>
+                <td>'.$ligne['cle_sympt'].'</td>
               </tr>';
               }              
               ?>
