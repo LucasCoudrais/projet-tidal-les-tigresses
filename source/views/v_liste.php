@@ -10,6 +10,7 @@
  *
  */
 //  En tête de page
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -72,10 +73,10 @@ $(document).ready(function() {
 
         <div class="col">
 
-            <form class="row g-3 needs-validation first-form" novalidate>
+            <form class="row g-3 needs-validation first-form" action="" method="post" >
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Recherche pathologie</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <input type="text" name="patho" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text">Recherche de mot(s) dans la description de la pathologie</div>
                 </div>
 
@@ -89,10 +90,9 @@ $(document).ready(function() {
               ?>
                 </select> 
                 <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Valider</button>
+                    <button class="btn btn-primary" name="submit" type="submit">Valider</button>
                 </div>
             </form>
-
         </div>
 
         <div class="col second-form-container">
@@ -108,7 +108,7 @@ $(document).ready(function() {
               ?>
             </select> 
                 <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Rechercher</button>
+                    <button class="btn btn-primary" type="submitKeyword">Rechercher</button>
                 </div>
             </form>
 
