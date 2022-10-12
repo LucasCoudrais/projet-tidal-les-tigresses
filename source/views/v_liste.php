@@ -75,18 +75,19 @@ $(document).ready(function() {
 
             <form class="row g-3 needs-validation first-form" action="" method="post" >
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Recherche pathologie</label>
-                  <input type="text" name="patho" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">Recherche de mot(s) dans la description de la pathologie</div>
+                  <label for="idPatho" class="form-label">Recherche pathologie</label>
+                  <input type="text" name="patho" class="form-control" id="idPatho" aria-describedby="pathonHelp">
+                  <div id="pathonHelp" class="form-text">Recherche de mot(s) dans la description de la pathologie</div>
                 </div>
 
-                <label for="cars">Code méridien</label>
+                <label for="mers">Code méridien</label>
 
-                <select name="cars" id="cars" class="js-example-basic-single">
+                <select name="mer" id="mers" class="js-example-basic-single">
+                <option >Choisir...</option>
                 <?php
               foreach ($resultat3 as $ligne3) {
-                echo '<tr><option value="'.$ligne3['mer'].'">'.$ligne3['mer'].'</option>';
-              }              
+                echo '<option value="'.$ligne3['mer'].'">'.$ligne3['mer'].'</option>';
+              }           
               ?>
                 </select> 
                 <div class="col-12">
@@ -101,9 +102,10 @@ $(document).ready(function() {
             <label for="keyword">Mot clé de symptome </label>
 
             <select name="keyword" id="keyword" class="js-example-basic-single">
+            <option >Choisir...</option>
               <?php
               foreach ($resultat2 as $ligne2) {
-                echo '<tr><option value="'.$ligne2['name'].'">'.$ligne2['name'].'</option>';
+                echo '<option value="'.$ligne2['name'].'">'.$ligne2['name'].'</option>';
               }              
               ?>
             </select> 
