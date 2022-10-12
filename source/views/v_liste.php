@@ -97,7 +97,7 @@ $(document).ready(function() {
 
         <div class="col second-form-container">
 
-            <form class="row g-3 needs-validation first-form" novalidate>
+            <form class="row g-3 needs-validation second-form" novalidate>
             <label for="keyword">Mot clé de symptome </label>
 
             <select name="keyword" id="keyword" class="js-example-basic-single">
