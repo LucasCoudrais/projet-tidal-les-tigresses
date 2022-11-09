@@ -42,7 +42,7 @@
   <header class="header">
     <nav class="navbar navbar-expand-lg " style="background-color: #57b846;">
       <div class="container-fluid">
-      <?php
+        <?php
         $status = $_GET['status'];
         ?>
         <a <?php echo 'href="http://localhost:50080/source/index.php?page=accueil&status=' . $status . '"' ?> class="navbar-brand" style="color: white;"> Les tigresses </a>
@@ -56,13 +56,25 @@
               <a class="nav-link link-navbar" style="color: black;" <?php echo 'href="http://localhost:50080/source/index.php?page=liste&status=' . $status . '"' ?>>Liste</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " style="color: white;" <?php echo 'href="http://localhost:50080/source/index.php?page=apropos&status=' . $status . '"' ?> >A propos</a>
+              <a class="nav-link " style="color: white;" <?php echo 'href="http://localhost:50080/source/index.php?page=apropos&status=' . $status . '"' ?>>A propos</a>
             </li>
           </ul>
-          <li class="d-flex">
-            <a class="nav-link" <?php echo 'href="http://localhost:50080/source/index.php?page=connexion&status=' . $status . '"' ?> ><span class='icon_user' style="
+          <?php
+          if ($status != "on") {
+          ?>
+            <li class="d-flex">
+              <a class="nav-link" <?php echo 'href="http://localhost:50080/source/index.php?page=connexion&status=' . $status . '"' ?>><span class='icon_user ' style="
     background: url('assets/icons/account_user-white.png');"></span></a>
-          </li>
+            </li>
+          <?php
+          } else {
+          ?>
+            <div class="button">
+              <a <?php echo 'href="http://localhost:50080/source/index.php?page=accueil&status="' ?> class="btn btn-primary ">Déconnexion</a>
+            </div>
+          <?php
+          }
+          ?>
         </div>
 
       </div>
@@ -100,27 +112,33 @@
       </form>
     </div>
 
-    <div class="col second-form-container">
+    <?php
+    if ($status == "on") {
+    ?>
+      <div class="col second-form-container">
 
-      <form class="row g-3 needs-validation second-form" novalidate>
-        <label for="keyword">Mot clé de symptome </label>
+        <form class="row g-3 needs-validation second-form" novalidate>
+          <label for="keyword">Mot clé de symptome </label>
 
-        <select name="keyword" id="keyword" class="js-example-basic-single">
-        <option selected="selected" value="choisir">
-            Choisir...
-          </option>
-          <?php
-          foreach ($resultat2 as $ligne2) {
-            echo '<option value="' . $ligne2['name'] . '">' . $ligne2['name'] . '</option>';
-          }
-          ?>
-        </select>
-        <div class="col-12">
-          <button class="btn btn-primary" type="submitKeyword">Rechercher</button>
-        </div>
-      </form>
+          <select name="keyword" id="keyword" class="js-example-basic-single">
+            <option selected="selected" value="choisir">
+              Choisir...
+            </option>
+            <?php
+            foreach ($resultat2 as $ligne2) {
+              echo '<option value="' . $ligne2['name'] . '">' . $ligne2['name'] . '</option>';
+            }
+            ?>
+          </select>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submitKeyword">Rechercher</button>
+          </div>
+        </form>
 
-    </div>
+      </div>
+    <?php
+    }
+    ?>
   </div>
   <div class="table-container">
     <table class="table">

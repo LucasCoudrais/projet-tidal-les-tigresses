@@ -46,10 +46,22 @@
               <a class="nav-link " style="color: white;" <?php echo 'href="http://localhost:50080/source/index.php?page=apropos&status=' . $status . '"' ?>>A propos</a>
             </li>
           </ul>
-          <li class="d-flex">
-            <a class="nav-link" <?php echo 'href="http://localhost:50080/source/index.php?page=connexion&status=' . $status . '"' ?>><span class='icon_user ' style="
+          <?php
+          if ($status != "on") {
+          ?>
+            <li class="d-flex">
+              <a class="nav-link" <?php echo 'href="http://localhost:50080/source/index.php?page=connexion&status=' . $status . '"' ?>><span class='icon_user ' style="
     background: url('assets/icons/account_user-white.png');"></span></a>
-          </li>
+            </li>
+          <?php
+          } else {
+          ?>
+            <div class="button">
+              <a <?php echo 'href="http://localhost:50080/source/index.php?page=accueil&status="' ?> class="btn btn-primary ">Déconnexion</a>
+            </div>
+          <?php
+          }
+          ?>
         </div>
 
       </div>
@@ -74,18 +86,24 @@
           </p>
 
         </div>
-        <div class="row">
-          <div class="col-6">
-            <div class="button">
-              <a <?php echo 'href="http://localhost:50080/source/index.php?page=connexion&status=' . $status . '"' ?> class="btn btn-primary ">Se connecter</a>
+        <?php
+        if ($status != "on") {
+        ?>
+          <div class="row">
+            <div class="col-6">
+              <div class="button">
+                <a <?php echo 'href="http://localhost:50080/source/index.php?page=connexion&status=' . $status . '"' ?> class="btn btn-primary ">Se connecter</a>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="button">
+                <a <?php echo 'href="http://localhost:50080/source/index.php?page=inscription&status=' . $status . '"' ?> class="btn btn-primary ">S'inscrire</a>
+              </div>
             </div>
           </div>
-          <div class="col-6">
-            <div class="button">
-              <a <?php echo 'href="http://localhost:50080/source/index.php?page=inscription&status=' . $status . '"' ?> class="btn btn-primary ">S'inscrire</a>
-            </div>
-          </div>
-        </div>
+        <?php
+        }
+        ?>
       </div>
     </div>
 

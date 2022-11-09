@@ -42,10 +42,22 @@
                 <a class="nav-link " style="color: white;" <?php echo 'href="http://localhost:50080/source/index.php?page=apropos&status=' . $status . '"' ?>>A propos</a>
               </li>
             </ul>
+            <?php
+          if ($status != "on") {
+          ?>
             <li class="d-flex">
-              <a class="nav-link"><span class='icon_user' style="
-    background: url('assets/icons/account_user_black.png');"></span></a>
+              <a class="nav-link" <?php echo 'href="http://localhost:50080/source/index.php?page=connexion&status=' . $status . '"' ?>><span class='icon_user ' style="
+    background: url('assets/icons/account_user_black-white.png');"></span></a>
             </li>
+          <?php
+          } else {
+          ?>
+            <div class="button">
+              <a <?php echo 'href="http://localhost:50080/source/index.php?page=accueil&status="' ?> class="btn btn-primary ">Déconnexion</a>
+            </div>
+          <?php
+          }
+          ?>
           </div>
 
         </div>
