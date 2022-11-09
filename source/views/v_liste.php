@@ -84,9 +84,9 @@
   </header>
   <div class="row">
 
-    <div class="col">
+    <div class="col ">
 
-      <form class="row g-3 needs-validation first-form" action="" method="post">
+      <form class="filtres g-3 needs-validation first-form" action="" method="post">
         <div class="mb-3">
           <label for="idPatho" class="form-label">Recherche pathologie</label>
           <input type="text" name="patho" class="form-control" id="idPatho" aria-describedby="pathonHelp">
@@ -94,8 +94,8 @@
         </div>
 
         <label for="mers">Code méridien</label>
-
-        <select name="mer" id="mers" class="js-example-basic-single">
+        <div class=" mb-3">
+        <select name="mer" id="mers" class="js-example-basic-single" style="width:200px">
           <option selected="selected" value="choisir">
             Choisir...
           </option>
@@ -106,6 +106,7 @@
           }
           ?>
         </select>
+        </div>
         <div class="col-12">
           <button class="btn btn-primary" name="submit" type="submit">Valider</button>
         </div>
@@ -115,12 +116,14 @@
     <?php
     if ($status == "on") {
     ?>
-      <div class="col second-form-container">
+      <div class="col second-form-container ">
 
         <form class="row g-3 needs-validation second-form" novalidate>
-          <label for="keyword">Mot clé de symptome </label>
 
-          <select name="keyword" id="keyword" class="js-example-basic-single">
+          <label for="keyword">Mot clé de symptome </label>
+          <div class=" mb-3">
+
+          <select name="keyword" id="keyword" class="js-example-basic-single" style="width:200px">
             <option selected="selected" value="choisir">
               Choisir...
             </option>
@@ -130,6 +133,10 @@
             }
             ?>
           </select>
+          </div>
+
+
+          
           <div class="col-12">
             <button class="btn btn-primary" type="submitKeyword">Rechercher</button>
           </div>
