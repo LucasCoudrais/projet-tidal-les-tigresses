@@ -2527,7 +2527,6 @@ INSERT INTO public.symptPatho(idS, idP, aggr) VALUES
 ;
 DROP TABLE IF EXISTS public.users;
 CREATE TABLE public.users(
-  idU INTEGER NOT NULL,
   name character varying(40)
             COLLATE pg_catalog."fr-FR-x-icu"
             DEFAULT NULL,
@@ -2540,11 +2539,10 @@ CREATE TABLE public.users(
             DEFAULT NULL,
   matricule character varying(40)
             COLLATE pg_catalog."fr-FR-x-icu"
-            DEFAULT NULL,
-  CONSTRAINT PK_users PRIMARY KEY (idU)
+            NOT NULL,
+  CONSTRAINT PK_users PRIMARY KEY (matricule)
 );
 INSERT INTO users VALUES (
-    '1',
     'ANELLI',
     'Mathis',
     '22',
@@ -2552,7 +2550,6 @@ INSERT INTO users VALUES (
     'mathisanl'
     ),
     (
-        '2',
         'MARTA',
         'Hugo',
         '20',
