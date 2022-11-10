@@ -30,35 +30,38 @@
     <nav class="navbar navbar-expand-lg " style="background-color: #57b846;">
       <div class="container-fluid">
         <?php
-        $status = $_GET['status'];
+        $status = $_COOKIE["userCookie"];
         ?>
-        <a <?php echo 'href="http://localhost:50080/source/index.php?page=accueil&status=' . $status . '"' ?> class="navbar-brand" style="color: white;"> Les tigresses </a>
+        <a href="http://localhost:50080/source/index.php?page=accueil" class="navbar-brand" style="color: white;"> Les tigresses </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link link-navbar " style="color: black;" aria-current="page" <?php echo 'href="http://localhost:50080/source/index.php?page=accueil&status=' . $status . '"' ?>>Accueil</a>
+              <a class="nav-link link-navbar " style="color: black;" aria-current="page" href="http://localhost:50080/source/index.php?page=accueil" >Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link-navbar" style="color: white;" <?php echo 'href="http://localhost:50080/source/index.php?page=liste&status=' . $status . '"' ?>>Liste</a>
+              <a class="nav-link link-navbar" style="color: white;" href="http://localhost:50080/source/index.php?page=liste" >Liste</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " style="color: white;" <?php echo 'href="http://localhost:50080/source/index.php?page=apropos&status=' . $status . '"' ?>>A propos</a>
+              <a class="nav-link " style="color: white;" href="http://localhost:50080/source/index.php?page=apropos" >A propos</a>
             </li>
           </ul>
           <?php
-          if ($status != "on") {
+          if (!isset($status)) {
           ?>
             <li class="d-flex">
-              <a class="nav-link" <?php echo 'href="http://localhost:50080/source/index.php?page=connexion&status=' . $status . '"' ?>><span class='icon_user ' style="
+              <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion" ><span class='icon_user ' style="
     background: url('assets/icons/account_user-white.png');"></span></a>
             </li>
           <?php
           } else {
           ?>
-            <div class="button">
-              <a <?php echo 'href="http://localhost:50080/source/index.php?page=accueil&status="' ?> class="btn btn-primary ">Déconnexion</a>
-            </div>
+
+            <form action="" method="post">
+              <div class="col-12">
+                <button class="btn btn-primary" name="submitDisconnect" type="submit">Déconnexion</button>
+              </div>
+            </form>
           <?php
           }
           ?>
@@ -87,17 +90,17 @@
 
         </div>
         <?php
-        if ($status != "on") {
+        if (!isset($status)) {
         ?>
           <div class="row">
             <div class="col-6">
               <div class="button">
-                <a <?php echo 'href="http://localhost:50080/source/index.php?page=connexion&status=' . $status . '"' ?> class="btn btn-primary ">Se connecter</a>
+                <a href="http://localhost:50080/source/index.php?page=connexion" class="btn btn-primary ">Se connecter</a>
               </div>
             </div>
             <div class="col-6">
               <div class="button">
-                <a <?php echo 'href="http://localhost:50080/source/index.php?page=inscription&status=' . $status . '"' ?> class="btn btn-primary ">S'inscrire</a>
+                <a href="http://localhost:50080/source/index.php?page=inscription" class="btn btn-primary ">S'inscrire</a>
               </div>
             </div>
           </div>

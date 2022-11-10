@@ -31,8 +31,9 @@
       $query1->execute();
    
       if ($query1->rowCount() >= 1) {
-          $resultatUser = $query1->fetch(PDO::FETCH_ASSOC);
-          header('Location: http://localhost:50080/source/index.php?page=accueil&status=on');
+          $query1->fetch(PDO::FETCH_ASSOC);
+          setcookie("userCookie", $userName);
+          header('Location: http://localhost:50080/source/index.php?page=accueil');
       } else {
           $resultatUser = '<script> window.alert("Mot de passe ou identifiant incorrect!"); </script>';
       }
