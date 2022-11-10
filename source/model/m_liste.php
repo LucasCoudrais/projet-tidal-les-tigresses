@@ -24,23 +24,32 @@
       // the value inside the brackets comes from the name attribute of the input field. (just like submit above)
       $patho = $_POST['patho'];
       $meri = $_POST['mer'];
+      $keyword = $_POST['keyword'];
       // Now you can do whatever with this variable.
     }
     $condition = "";
-    if(isset($meri) and isset($patho) && $meri != "choisir" and $patho != "" && $meri != ""){
+    if((isset($meri) && $meri != "choisir") and (isset($patho) and $patho != "") and (isset($keyword) && $keyword != "choisir") ){
+      $condition = $condition."where patho.mer like '".$meri."' and patho.desc like '%".$patho."%' and keywords.name like '".$keyword."'";
+    } elseif((isset($meri) && $meri != "choisir") and (isset($patho) and $patho != "") ){
       $condition = $condition."where patho.mer like '".$meri."' and patho.desc like '%".$patho."%'";
+    } elseif((isset($meri) && $meri != "choisir") and (isset($keyword) and $keyword != "") ){
+      $condition = $condition."where patho.mer like '".$meri."' and keywords.name like '".$keyword."'";
+    } elseif((isset($keyword) && $keyword != "choisir") and (isset($patho) and $patho != "") ){
+      $condition = $condition."where keywords.name like '".$keyword."' and patho.desc like '%".$patho."%'";
     } elseif( isset($patho) && $patho != "")  {
         $condition = $condition."where patho.desc like '%".$patho."%'";
-    } elseif(isset($meri) && $meri != "" && $meri != "choisir"){
+    } elseif(isset($meri) && $meri != "choisir"){
       $condition = $condition."where patho.mer like '".$meri."'";
+    } elseif(isset($keyword) && $keyword != "choisir"){
+      $condition = $condition."where keywords.name like '".$keyword."'";
     }
-    $query = "select patho.desc as desc_patho, meridien.nom as nom_meri, symptome.desc AS desc_symptome, keywords.name as cle_sympt, patho.mer as code_meri, patho.type from patho
+    $queryLong = "select patho.desc as desc_patho, meridien.nom as nom_meri, symptome.desc AS desc_symptome, keywords.name as cle_sympt, patho.mer as code_meri, patho.type from patho
     inner join meridien on patho.mer = meridien.code
     inner join symptpatho on patho.idp = symptpatho.idp
     inner join symptome on symptpatho.ids = symptome.ids
     inner join keySympt on symptome.ids = keySympt.ids
     inner join keywords on keySympt.idk = keywords.idk ".$condition;
-    $query1 = $bdd->prepare($query);
+    $query1 = $bdd->prepare($queryLong);
     $query1->execute();
         $resultat1 = $query1->fetchAll(PDO::FETCH_ASSOC);
 
@@ -55,8 +64,8 @@
 	}	
 	catch(PDOException $e)
 	{
-                if(DEBUG)
-                        die ('Erreur : '.$e->getMessage());
+    if(DEBUG)
+      die ('Erreur : '.$e->getMessage());
 		$erreur = 'query';
 	}
   }

@@ -2549,7 +2549,7 @@ INSERT INTO users VALUES (
     'Mathis',
     '22',
     'antoinelpb',
-    '0001'
+    'mathisanl'
     ),
     (
         '2',
@@ -2557,6 +2557,6 @@ INSERT INTO users VALUES (
         'Hugo',
         '20',
         'margotlpb',
-        '0002'
+        'hugomrt'
     );
 

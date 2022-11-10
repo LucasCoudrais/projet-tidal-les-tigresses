@@ -86,7 +86,7 @@
 
     <div class="col ">
 
-      <form class="filtres g-3 needs-validation first-form" action="" method="post">
+      <form class="g-3 needs-validation first-form" action="" method="post">
         <div class="mb-3">
           <label for="idPatho" class="form-label">Recherche pathologie</label>
           <input type="text" name="patho" class="form-control" id="idPatho" aria-describedby="pathonHelp">
@@ -95,57 +95,44 @@
 
         <label for="mers">Code méridien</label>
         <div class=" mb-3">
-        <select name="mer" id="mers" class="js-example-basic-single" style="width:200px">
-          <option selected="selected" value="choisir">
-            Choisir...
-          </option>
+          <select name="mer" id="mers" class="js-example-basic-single" style="width:300px">
+            <option selected="selected" value="choisir">
+              Choisir...
+            </option>
 
-          <?php
-          foreach ($resultat3 as $ligne3) {
-            echo '<option value="' . $ligne3['mer'] . '">' . $ligne3['mer'] . '</option>';
-          }
-          ?>
-        </select>
+            <?php
+            foreach ($resultat3 as $ligne3) {
+              echo '<option value="' . $ligne3['mer'] . '">' . $ligne3['mer'] . '</option>';
+            }
+            ?>
+          </select>
         </div>
+        <?php
+        if ($status == "on") {
+        ?>
+          <label for="keyword">Mot clé de symptome </label>
+
+          <div class=" mb-3">
+
+            <select name="keyword" id="keyword" class="js-example-basic-single" style="width:300px">
+              <option selected="selected" value="choisir">
+                Choisir...
+              </option>
+              <?php
+              foreach ($resultat2 as $ligne2) {
+                echo '<option value="' . $ligne2['name'] . '">' . $ligne2['name'] . '</option>';
+              }
+              ?>
+            </select>
+          </div>
+        <?php
+        }
+        ?>
         <div class="col-12">
           <button class="btn btn-primary" name="submit" type="submit">Valider</button>
         </div>
       </form>
     </div>
-
-    <?php
-    if ($status == "on") {
-    ?>
-      <div class="col second-form-container ">
-
-        <form class="row g-3 needs-validation second-form" novalidate>
-
-          <label for="keyword">Mot clé de symptome </label>
-          <div class=" mb-3">
-
-          <select name="keyword" id="keyword" class="js-example-basic-single" style="width:200px">
-            <option selected="selected" value="choisir">
-              Choisir...
-            </option>
-            <?php
-            foreach ($resultat2 as $ligne2) {
-              echo '<option value="' . $ligne2['name'] . '">' . $ligne2['name'] . '</option>';
-            }
-            ?>
-          </select>
-          </div>
-
-
-          
-          <div class="col-12">
-            <button class="btn btn-primary" type="submitKeyword">Rechercher</button>
-          </div>
-        </form>
-
-      </div>
-    <?php
-    }
-    ?>
   </div>
   <div class="table-container">
     <table class="table">
