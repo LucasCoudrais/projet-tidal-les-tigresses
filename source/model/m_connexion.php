@@ -1,5 +1,8 @@
 <?php
 
+if(isset($_POST['submitDisconnect'])) {
+  setcookie('userCookie', null, -1);
+}	
 // accès base de données
   // connection à la base de données
   try

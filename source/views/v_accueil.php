@@ -30,7 +30,7 @@
     <nav class="navbar navbar-expand-lg " style="background-color: #57b846;">
       <div class="container-fluid">
         <?php
-        $status = $_COOKIE["userCookie"];
+        $status = isset($_COOKIE['userCookie']) ? $_COOKIE['userCookie'] : null;
         ?>
         <a href="http://localhost:50080/source/index.php?page=accueil" class="navbar-brand" style="color: white;"> Les tigresses </a>
 
@@ -47,7 +47,7 @@
             </li>
           </ul>
           <?php
-          if (!isset($status)) {
+          if (!isset($status) || $status == null) {
           ?>
             <li class="d-flex">
               <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion" ><span class='icon_user ' style="
@@ -90,7 +90,7 @@
 
         </div>
         <?php
-        if (!isset($status)) {
+        if (!isset($status) || $status == null) {
         ?>
           <div class="row">
             <div class="col-6">

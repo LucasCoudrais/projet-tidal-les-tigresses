@@ -43,7 +43,7 @@
     <nav class="navbar navbar-expand-lg " style="background-color: #57b846;">
       <div class="container-fluid">
         <?php
-        $status = $_COOKIE["userCookie"];
+        $status = $_COOKIE['userCookie'];
         ?>
         <a href="http://localhost:50080/source/index.php?page=accueil" class="navbar-brand" style="color: white;"> Les tigresses </a>
 
@@ -60,7 +60,7 @@
             </li>
           </ul>
           <?php
-          if (!isset($status)) {
+          if ($status == null) {
           ?>
             <li class="d-flex">
               <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion"><span class='icon_user ' style="
@@ -69,9 +69,11 @@
           <?php
           } else {
           ?>
-            <div class="button">
-              <a href="http://localhost:50080/source/index.php?page=accueil" class="btn btn-primary ">Déconnexion</a>
-            </div>
+            <form action="" method="post">
+              <div class="col-12">
+                <button class="btn btn-primary" name="submitDisconnect" type="submit">Déconnexion</button>
+              </div>
+            </form>
           <?php
           }
           ?>
@@ -108,7 +110,7 @@
           </select>
         </div>
         <?php
-        if ($status == "on") {
+        if (isset($status) && $status != null) {
         ?>
           <label for="keyword">Mot clé de symptome </label>
 
