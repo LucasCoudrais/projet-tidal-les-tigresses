@@ -80,13 +80,25 @@
 
   <div class="limiter">
     <div class="container-login100" style="background-image: url('assets/acuponcture_apropos.jpg');">
-      <div class="wrap-login100 p-t-30 p-b-50">
+      <div class="wrap-login100 p-t-30 p-b-50" style="color: white;">
         <h1>Qui sommes-nous?</h1>
-        <p>Nous sommes 4 étudiants en école d'ingénieur et nous réalisons un projet TIDAL</p>
-        <p>Pour réaliser ce site web, nous avons utilisés la collection Boostrap et nous avons utilisés les langages
+        <p style="color: white;">Nous sommes 4 étudiants en école d'ingénieur et nous réalisons un projet TIDAL</p>
+        <p style="color: white;">Pour réaliser ce site web, nous avons utilisés la collection Boostrap et nous avons utilisés les langages
           html,
           css et php</p>
-        <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Boostrap exemples</a>
+        <h3>Bibliographie:</h3>
+        <ul>
+          <li><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Boostrap exemples</a></li>
+          <li> <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">W3School</a></li>
+          <li> <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Documentation php</a>
+          </li>
+          <li> <a>Cours de PHP de TIDAL</a>
+          </li>
+          <li> <a>Pour le searchable select, nous ne retrouvons pas le lien mais le fichier source pris sur internet est dans le dossier assets</a>
+          </li>
+          <li> <a>Pour le css et le html de la page connexion nous avons aussi pris un template sur internet mais ne retrouvons pas le lien</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

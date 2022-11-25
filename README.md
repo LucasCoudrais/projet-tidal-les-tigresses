@@ -18,7 +18,7 @@ Difficultés rencontrées:
  - Délais entre les séances, reprendre le travail où on en était.
  - Travail en groupe sur GIT, problème de conflit, de branches.
  - Certaines notions du cours compliquées à mettre en oeuvre.
- - L'énoncé du projet parfois vague, notamment sur les contraintes technologiques à utiliser.
+ - L'énoncé du projet parfois vague, notamment sur les contraintes technologiques à utiliser et les spécifictés des filtres et des attentes précises.
  - Différences de niveau au sein du groupe (2 developpeurs // 2 réseaux), équilibrage des notions et répartitions des taches compliqués => perte de temps.
 
 Bibliographie:
@@ -26,4 +26,6 @@ Bibliographie:
  - https://getbootstrap.com/docs/5.2/getting-started/introduction/
  - https://www.php.net/manual/fr/
  - https://www.w3schools.com/php
- - pour le searchable select, impossible de retrouver le lien mais le fichier source pris sur internet est dans le dossier assets
+ - pour le searchable select, nous ne retrouvons pas le lien mais le fichier source pris sur internet est dans le dossier assets
+ - pour le css et le html de la page connexion nous avons aussi pris un template sur internet mais ne retrouvons pas le lien
+
