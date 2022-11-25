@@ -9,7 +9,7 @@ Membres du groupes:
 Pour faire fonctionner notre site: <br>
 	1) Allumer la VM debian-web-2022-disk001 et se connecter en root (id:root//mdp:tp) <br>
 	2) Se connecter à la base de données http://localhost:50080/pgadmin4/ (id:tp@t.p mdp:tptptp) <br>
-	3) Lancer le script pgsql joint au projet <br>
+	3) Créer une base de données "acudb" puis lancer le script pgsql joint au projet <br>
 	4) Se connecter au site web http://localhost:50080/ (ne pas oublier la connexion ssh) <br>
 	5) Se connecter au site grace à un "compte uitlisateur" (identifiant : "admin" + mot de passe : "Admin123")  <br>
 	6) Profiter d'une visite inoubliable sur notre site <br>
