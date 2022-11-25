@@ -25,7 +25,9 @@
   <header class="header">
       <nav class="navbar navbar-expand-lg " style="background-color: #57b846;">
         <div class="container-fluid">
-
+        <?php
+        $status = isset($_COOKIE['userCookie']) ? $_COOKIE['userCookie'] : null;
+        ?>
           <a href="http://localhost:50080/source/index.php?page=accueil" class="navbar-brand" style="color: white;"> Les tigresses </a>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -40,9 +42,24 @@
                 <a class="nav-link " style="color: white;" href="http://localhost:50080/source/index.php?page=apropos">A propos</a>
               </li>
             </ul>
+            <?php
+          if (!isset($status) || $status == null) {
+          ?>
             <li class="d-flex">
-              <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion"><span class='icon_user'></span></a>
+              <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion"><span class='icon_user ' style="
+    background: url('assets/icons/account_user_black-white.png');"></span></a>
             </li>
+          <?php
+          } else {
+          ?>
+            <form action="" method="post">
+              <div class="col-12">
+                <button class="btn btn-primary" name="submitDisconnect" type="submit">Déconnexion</button>
+              </div>
+            </form>
+          <?php
+          }
+          ?>
           </div>
 
         </div>
@@ -53,52 +70,35 @@
       <h1>Inscription</h1>
       <br>
       <br>
-      <br>
-      <form class="row g-3">
+      <form class="row g-3" class="formInscr" style="margin-left: 30px; margin-right:30px;" action="" method="post">
         <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
+          <label for="inputID" class="form-label">Identifiant</label>
+          <input type="text" name="idUser" class="form-control" id="inputID">
         </div>
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Mot de passe</label>
-          <input type="password" class="form-control" id="inputPassword4">
-        </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Adresse</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Chemin ">
-        </div>
-        <div class="col-12">
-          <label for="inputAddress2" class="form-label">Adresse 2 </label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Appartement, studio ou maison">
-        </div>
-        <div class="col-md-6">
-          <label for="inputCity" class="form-label">Ville</label>
-          <input type="text" class="form-control" id="inputCity">
+          <input type="password" name="pwdUser" class="form-control" id="inputPassword4">
         </div>
         <div class="col-md-4">
-          <label for="inputState" class="form-label">Pays</label>
-          <select id="inputState" class="form-select">
-            <option selected>Choisir...</option>
-            <option>France</option>
-            <option>Angleterre</option>
-            <option>Belgique</option>
-            <option>Etats Unis</option>
-            <option>Allemagne</option>
-            <option>Suisse</option>
-            <option>Autre</option>
-          </select>
+          <label for="inputName" class="form-label">Nom</label>
+          <input type="text" name="nameUser" class="form-control" id="inputName">
         </div>
-        
+        <div class="col-md-4">
+          <label for="inputFirstName" class="form-label">Prénom</label>
+          <input type="text" name="firstNameUser" class="form-control" id="inputFirstName" >
+        </div>
+        <div class="col-md-4">
+          <label for="inputAge" class="form-label">Age</label>
+          <input type="number" name="ageUser" class="form-control" id="inputAge">
+        </div>
         <div class="col-12">
-          <div class="button">
-            <a href="http://localhost:50080/source/index.php?page=accueil" class="btn btn-primary ">Valider</a>
-            </div>
+          <button class="btn btn-primary" name="submitIns" type="submit">S'inscrire</button>
         </div>
+        <?php
+          echo $resultatInscr;
+          ?>
       </form>
-
-
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-     
     </body>
   </html>
   

@@ -13,37 +13,56 @@
 ?>
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>A propos de nous</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/apropos.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A propos de nous</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/apropos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
   <header class="header">
     <nav class="navbar navbar-expand-lg " style="background-color: #57b846;">
       <div class="container-fluid">
-
+        <?php
+        $status = isset($_COOKIE['userCookie']) ? $_COOKIE['userCookie'] : null;
+        ?>
         <a href="http://localhost:50080/source/index.php?page=accueil" class="navbar-brand" style="color: white;"> Les tigresses </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link link-navbar " style="color:  white;" aria-current="page"  href="http://localhost:50080/source/index.php?page=accueil">Accueil</a>
+              <a class="nav-link link-navbar " style="color:  white;" aria-current="page" href="http://localhost:50080/source/index.php?page=accueil" >Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link-navbar" style="color: white;" href="http://localhost:50080/source/index.php?page=liste">Liste</a>
+              <a class="nav-link link-navbar" style="color: white;" href="http://localhost:50080/source/index.php?page=liste" >Liste</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " style="color: black;" href="http://localhost:50080/source/index.php?page=apropos">A propos</a>
+              <a class="nav-link " style="color: black;" href="http://localhost:50080/source/index.php?page=apropos" >A propos</a>
             </li>
           </ul>
-          <li class="d-flex">
-            <a class="nav-link"href="http://localhost:50080/source/index.php?page=connexion"><span class='icon_user ' style="
-    background: url('assets/icons/account_user-white.png');"></span></a>
-          </li>
+
+          <?php
+          if (!isset($status) || $status == null) {
+          ?>
+            <li class="d-flex">
+              <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion"><span class='icon_user ' style="
+                background: url('assets/icons/account_user-white.png');"></span></a>
+            </li>
+          <?php
+          } else {
+          ?>
+            <form action="" method="post">
+              <div class="col-12">
+                <button class="btn btn-primary" name="submitDisconnect" type="submit">Déconnexion</button>
+              </div>
+            </form>
+          <?php
+          }
+          ?>
         </div>
 
       </div>
@@ -68,7 +87,7 @@
       </div>
     </div>
   </div>
-</div>
+  </div>
 </body>
 
 </html>
