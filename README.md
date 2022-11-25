@@ -11,7 +11,7 @@ Pour faire fonctionner notre site: <br>
 	2) Se connecter à la base de données http://localhost:50080/pgadmin4/ (id:tp@t.p mdp:tptptp) <br>
 	3) Lancer le script pgsql joint au projet <br>
 	4) Se connecter au site web http://localhost:50080/ (ne pas oublier la connexion ssh) <br>
-	5) Se connecter au site grace à un "compte uitlisateur" (identifiant+mot de passe)  <br>
+	5) Se connecter au site grace à un "compte uitlisateur" (identifiant : "admin" + mot de passe : "Admin123")  <br>
 	6) Profiter d'une visite inoubliable sur notre site <br>
 
 Difficultés rencontrées:
@@ -22,7 +22,8 @@ Difficultés rencontrées:
  - Différences de niveau au sein du groupe (2 developpeurs // 2 réseaux), équilibrage des notions et répartitions des taches compliqués => perte de temps.
 
 Bibliographie:
- - Cours
- - w3schools.com
- - wikipedia.com
- - php.net
+ - Cours de PHP de TIDAL
+ - https://getbootstrap.com/docs/5.2/getting-started/introduction/
+ - https://www.php.net/manual/fr/
+ - https://www.w3schools.com/php
+ - pour le searchable select, impossible de retrouver le lien mais le fichier source pris sur internet est dans le dossier assets

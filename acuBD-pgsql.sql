@@ -2543,17 +2543,17 @@ CREATE TABLE public.users(
   CONSTRAINT PK_users PRIMARY KEY (matricule)
 );
 INSERT INTO users VALUES (
-    'ANELLI',
-    'Mathis',
-    '22',
-    'antoinelpb',
-    'mathisanl'
+    'ADMIN',
+    'Istrateur',
+    '18',
+    'Admin123',
+    'admin'
     ),
     (
-        'MARTA',
-        'Hugo',
+        'TEST',
+        'Tidal',
         '20',
-        'margotlpb',
-        'hugomrt'
+        'test',
+        'Tidalpasword'
     );
 
