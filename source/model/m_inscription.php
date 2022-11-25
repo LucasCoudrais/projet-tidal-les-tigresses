@@ -1,8 +1,8 @@
 <?php
-    if(isset($_POST['submitDisconnect'])) {
-        setcookie('userCookie', null, -1);
-        header('Location: http://localhost:50080/source/index.php?page=inscription');
-    }	
+if (isset($_POST['submitDisconnect'])) {
+    setcookie('userCookie', null, -1);
+    header('Location: http://localhost:50080/source/index.php?page=inscription');
+}
 // accès base de données
 // connection à la base de données
 try {
@@ -25,7 +25,7 @@ if (!isset($erreur)) {
             $pwdUser = $_POST['pwdUser'];
             $nameUser = $_POST['nameUser'];
             $firstNameUser = $_POST['firstNameUser'];
-            $ageUser = $_POST['ageUser'];    
+            $ageUser = $_POST['ageUser'];
 
             $queryTest = "select * from users where matricule='" . $idUser . "'";
             $query2 = $bdd->prepare($queryTest);

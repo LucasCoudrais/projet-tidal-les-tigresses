@@ -37,20 +37,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link link-navbar " style="color: black;" aria-current="page" href="http://localhost:50080/source/index.php?page=accueil" >Accueil</a>
+              <a class="nav-link link-navbar " style="color: black;" aria-current="page" href="http://localhost:50080/source/index.php?page=accueil">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link-navbar" style="color: white;" href="http://localhost:50080/source/index.php?page=liste" >Liste</a>
+              <a class="nav-link link-navbar" style="color: white;" href="http://localhost:50080/source/index.php?page=liste">Liste</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " style="color: white;" href="http://localhost:50080/source/index.php?page=apropos" >A propos</a>
+              <a class="nav-link " style="color: white;" href="http://localhost:50080/source/index.php?page=apropos">A propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " style="color: white;" href="http://localhost:50080/source/index.php?page=api">Test API</a>
             </li>
           </ul>
           <?php
           if (!isset($status) || $status == null) {
           ?>
             <li class="d-flex">
-              <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion" ><span class='icon_user ' style="
+              <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion"><span class='icon_user ' style="
     background: url('assets/icons/account_user-white.png');"></span></a>
             </li>
           <?php
