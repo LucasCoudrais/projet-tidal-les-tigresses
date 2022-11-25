@@ -44,7 +44,7 @@
               <a class="nav-link " style="color: black;" href="http://localhost:50080/source/index.php?page=apropos">A propos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " style="color: white;" href="http://localhost:50080/source/index.php?page=api">Test API</a>
+              <a class="nav-link " style="color: white;" href="http://localhost:50080/source/index.php?page=api">Démo API</a>
             </li>
           </ul>
 
