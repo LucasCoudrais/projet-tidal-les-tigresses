@@ -96,7 +96,7 @@
           </li>
           <li> <a>Pour le searchable select, nous ne retrouvons pas le lien mais le fichier source pris sur internet est dans le dossier assets</a>
           </li>
-          <li> <a>Pour le css et le html de la page connexion nous avons aussi pris un template sur internet mais ne retrouvons pas le lien</a>
+          <li> <a href="https://colorlib.com/wp/cat/login-forms/">Pour le css et le html de la page connexion et du menu navbar</a>
           </li>
         </ul>
       </div>
