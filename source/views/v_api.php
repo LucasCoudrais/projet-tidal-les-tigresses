@@ -52,7 +52,7 @@
           ?>
             <li class="d-flex">
               <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion"><span class='icon_user ' style="
-    background: url('assets/icons/account_user_black-white.png');"></span></a>
+    background: url('assets/icons/account_user-white.png');"></span></a>
             </li>
           <?php
           } else {
