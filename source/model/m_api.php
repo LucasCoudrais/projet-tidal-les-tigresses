@@ -1,14 +1,14 @@
 <?php
 
-if (isset($_POST['submitDisconnect'])) {
-    setcookie('userCookie', null, -1);
-    header('Location: http://localhost:50080/source/index.php?page=api');
+if (isset($_POST['submitDisconnect'])) {//gestion de l'appui sur le bouton de déconnexion
+    setcookie('userCookie', null, -1);// on "supprime" le cookie
+    header('Location: http://localhost:50080/source/index.php?page=api');// on refresh la page pour mettre à jour l'interface dynamique
 }
 
 function runAPI($resource, $method, $params)
 {
-    if ($resource == "patho") {
-        if ($method == "GET") {
+    if ($resource == "patho") {//ressources patho
+        if ($method == "GET") {//méthode GET
             if ($params == NULL) {
                 $result = getListPatho();
             } else {

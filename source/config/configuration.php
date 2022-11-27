@@ -9,6 +9,8 @@
  * http://www.opensource.org/licenses/MIT
  */
  
+// fichier utilisé pour définir des constantes globales a tous le projets pour n'avoir à changer des valeurs constante qu'a un endroit dans le code
+
 const DEBUG = true; // production : false; dev : true
 
 // Accès base de données

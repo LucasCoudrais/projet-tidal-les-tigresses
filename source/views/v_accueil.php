@@ -30,7 +30,7 @@
     <nav class="navbar navbar-expand-lg " style="background-color: #57b846;">
       <div class="container-fluid">
         <?php
-        $status = isset($_COOKIE['userCookie']) ? $_COOKIE['userCookie'] : null;
+        $status = isset($_COOKIE['userCookie']) ? $_COOKIE['userCookie'] : null; //récupération du cookie
         ?>
         <a href="http://localhost:50080/source/index.php?page=accueil" class="navbar-brand" style="color: white;"> Les tigresses </a>
 
@@ -50,7 +50,7 @@
             </li>
           </ul>
           <?php
-          if (!isset($status) || $status == null) {
+          if (!isset($status) || $status == null) {// affichage dynamique du bouton de connexion/deconnexion en fonction du contenu du cookie
           ?>
             <li class="d-flex">
               <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion"><span class='icon_user ' style="

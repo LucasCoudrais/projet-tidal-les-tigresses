@@ -43,7 +43,7 @@
     <nav class="navbar navbar-expand-lg " style="background-color: #57b846;">
       <div class="container-fluid">
         <?php
-        $status = $_COOKIE['userCookie'];
+        $status = isset($_COOKIE['userCookie']) ? $_COOKIE['userCookie'] : null;//récupération du cookie
         ?>
         <a href="http://localhost:50080/source/index.php?page=accueil" class="navbar-brand" style="color: white;"> Les tigresses </a>
 
@@ -63,7 +63,7 @@
             </li>
           </ul>
           <?php
-          if ($status == null) {
+          if ($status == null) {  // affichage dynamique du bouton de connexion/deconnexion en fonction du contenu du cookie
           ?>
             <li class="d-flex">
               <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion"><span class='icon_user ' style="
@@ -105,7 +105,7 @@
               Choisir...
             </option>
 
-            <?php
+            <?php // parcours de la liste des meridiens et affichage en html dans le select
             foreach ($resultat3 as $ligne3) {
               echo '<option value="' . $ligne3['mer'] . '">' . $ligne3['mer'] . '</option>';
             }
@@ -124,7 +124,7 @@
                 Choisir...
               </option>
               <?php
-              foreach ($resultat2 as $ligne2) {
+              foreach ($resultat2 as $ligne2) { // parcours de la liste des mot clé et affichage en html dans le select
                 echo '<option value="' . $ligne2['name'] . '">' . $ligne2['name'] . '</option>';
               }
               ?>
@@ -153,7 +153,7 @@
       </thead>
       <tbody>
         <?php
-        foreach ($resultat1 as $ligne) {
+        foreach ($resultat1 as $ligne) {// affichage de la table chaque boucle représente une ligne
           echo '<tr>
                 <th scope="row">' . $ligne['desc_patho'] . '</th>
                 <td>' . $ligne['type'] . '</td>

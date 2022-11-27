@@ -1,6 +1,11 @@
 
 <?php
 
+//fichier de controller respectant la bonne architecture MVC il controlle les données qui entre et qui sorte et fait le lien
+// entre le modèle et la vue 
+// il va appeler les méthode du modèle en fonction de ce qu'il recoit de la vue qu'il aura préalablement controllé
+//puis il controllé ce que lui renvoie le modèle avant d'y renvoyer à la vue 
+
 require_once(PATH_MODELS . $page . '.php');
 
 

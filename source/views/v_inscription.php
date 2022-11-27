@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-lg " style="background-color: #57b846;">
       <div class="container-fluid">
         <?php
-        $status = isset($_COOKIE['userCookie']) ? $_COOKIE['userCookie'] : null;
+        $status = isset($_COOKIE['userCookie']) ? $_COOKIE['userCookie'] : null;//récupération du cookie
         ?>
         <a href="http://localhost:50080/source/index.php?page=accueil" class="navbar-brand" style="color: white;"> Les tigresses </a>
 
@@ -48,7 +48,7 @@
             </li>
           </ul>
           <?php
-          if (!isset($status) || $status == null) {
+          if (!isset($status) || $status == null) {// affichage dynamique du bouton de connexion/deconnexion en fonction du contenu du cookie
           ?>
             <li class="d-flex">
               <a class="nav-link" href="http://localhost:50080/source/index.php?page=connexion"><span class='icon_user ' style="
@@ -75,7 +75,7 @@
   <h1>Inscription</h1>
   <br>
   <br>
-  <form class="row g-3" class="formInscr" style="margin-left: 30px; margin-right:30px;" action="" method="post">
+  <form class="row g-3" class="formInscr" style="margin-left: 30px; margin-right:30px;" action="" method="post"> 
     <div class="col-md-6">
       <label for="inputID" class="form-label">Identifiant</label>
       <input type="text" name="idUser" class="form-control" id="inputID">
@@ -100,7 +100,7 @@
       <button class="btn btn-primary" name="submitIns" type="submit">S'inscrire</button>
     </div>
     <?php
-    echo $resultatInscr;
+    echo $resultatInscr; // si jamais on a une erreur permet d'afficher une alert
     ?>
   </form>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
