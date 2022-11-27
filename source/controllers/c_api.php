@@ -5,8 +5,10 @@ require_once(PATH_MODELS . $page . '.php');
 
 
 if (isset($_POST['submitGetId'])) {
-    if (isset($_POST['idPatho']) || $_POST['idPatho'] != "") {
+    if (isset($_POST['idPatho']) && $_POST['idPatho'] != "") {
         $result = runAPI("patho", "GET", $_POST['idPatho']);
+    } else {
+        $result = '<script> window.alert("Veuillez rentrer un identifiant d API"); </script>';
     }
     if ($result == 404 || $result == 405) {
         $resultatDescription = '<script> window.alert("Erreur lors de la récupération de cette patho"); </script>';

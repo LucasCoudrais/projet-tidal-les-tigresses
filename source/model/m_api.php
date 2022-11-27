@@ -5,8 +5,6 @@ if (isset($_POST['submitDisconnect'])) {
     header('Location: http://localhost:50080/source/index.php?page=accueil');
 }
 
-
-
 if (!isset($erreur)) {
     try {
         function runAPI($resource, $method, $params)
@@ -42,7 +40,7 @@ if (!isset($erreur)) {
             }
             $query = 'select * from patho where idp=? ';
             $query1 = $bdd->prepare($query);
-            $query1->execute(array($params)); //sécurité
+            $query1->execute(array($params));
             return $query1->fetch(PDO::FETCH_ASSOC);
         }
 
