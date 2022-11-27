@@ -25,7 +25,7 @@ Difficultés rencontrées:
 Changements depuis la dernière séance : 
 - Inscription fonctionne
 - Connexion et déconnexion à travers des cookies et non pas une variable dans l'URL 
-- Ajout d'un page de démo pour l'API qui possède un modèle MVC plus propre que les autres pages et aussi des exemple de méthode d'API simple que nous avons pu avoir le temps de mettre en place
+- Ajout d'un page de démo pour l'API qui possède un modèle MVC plus propre que les autres pages et aussi des exemples de méthodes d'API simple que nous avons pu avoir le temps de mettre en place
 
 Bibliographie:
  - Cours de PHP de TIDAL
@@ -34,4 +34,3 @@ Bibliographie:
  - https://www.w3schools.com/php
  - pour le searchable select, nous ne retrouvons pas le lien mais le fichier source pris sur internet est dans le dossier assets
  - [pour le css et le html de la page connexion et du menu navbar](https://colorlib.com/wp/cat/login-forms/)
-
